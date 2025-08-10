@@ -58,7 +58,10 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
             });
         }, options);
-        
+        // Add to your existing IntersectionObserver
+document.querySelectorAll('.achievement-card').forEach(card => {
+    observer.observe(card);
+});
         elements.forEach(el => {
             if (el) observer.observe(el);
         });

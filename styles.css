@@ -863,3 +863,63 @@ body {
     from, to { opacity: 1; }
     50% { opacity: 0; }
 }
+/* Achievements Section */
+.achievements {
+    padding: 6rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.achievements-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.achievement-card {
+    background-color: var(--navy);
+    padding: 2rem;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    border-top: 3px solid var(--teal);
+}
+
+.achievement-card:hover {
+    transform: translateY(-10px);
+}
+
+.achievement-icon {
+    font-size: 2.5rem;
+    color: var(--teal);
+    margin-bottom: 1rem;
+}
+
+.achievement-card h3 {
+    color: var(--white);
+    margin-bottom: 0.5rem;
+}
+
+.achievement-card p {
+    color: var(--light-slate);
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.achievement-date {
+    display: inline-block;
+    background-color: rgba(100, 255, 218, 0.1);
+    color: var(--teal);
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .achievements-grid {
+        grid-template-columns: 1fr;
+    }
+}
